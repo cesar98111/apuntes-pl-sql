@@ -1,0 +1,17 @@
+SET SERVEROUTPUT ON;
+DECLARE
+    vNota NUMBER := 5;
+BEGIN
+    IF (VNota > 0 AND vNota < 5) THEN
+        DBMS_OUTPUT.PUT_LINE('INSUFICIENTE'||'-');
+    ELSIF (vNota >= 5  AND vNota < 6) THEN
+        DBMS_OUTPUT.PUT_LINE('SUFICIENTE');
+    ELSIF (vNota >= 6  AND vNota < 7) THEN
+        DBMS_OUTPUT.PUT_LINE('BIEN');
+        ELSIF (vNota >= 9 AND vNota <= 10) THEN
+        DBMS_OUTPUT.PUT_LINE('SOBRESALIENTE');
+        ELSE
+        DBMS_OUTPUT.PUT_LINE('NOTA INVALIDAD');
+    END IF;
+END;
+/
